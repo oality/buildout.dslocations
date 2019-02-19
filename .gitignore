@@ -25,7 +25,7 @@ lib/
 local/
 parts/
 src/*
-data/
+      data/
 
 # excludes
 !.coveragerc
@@ -37,3 +37,10 @@ data/
 var/
 buildout.cfg
 share/
+Gruntfile.js
+node_modules/
+package-lock.json
+package.json
+push_rsync.sh
+rsync.sh
+temp_resources/
