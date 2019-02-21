@@ -5,8 +5,6 @@ RUN  rm -rf /plone/*.cfg /plone/bin /plone/parts /plone/src /plone/var /plone/.i
 COPY prod.cfg versions.cfg /plone/
 
 RUN buildDeps="dpkg-dev git gcc libbz2-dev libc6-dev libjpeg62-turbo-dev libopenjp2-7-dev libpcre3-dev libssl-dev libtiff5-dev libxml2-dev libxslt1-dev wget zlib1g-dev" \
- && apt-get update \
- && apt-get install -y --no-install-recommends $buildDeps \
  && cd /plone \
  && buildout -c prod.cfg \
  && ln -s /data/filestorage/ /plone/var/filestorage \
